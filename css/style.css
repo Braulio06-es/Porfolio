@@ -246,10 +246,9 @@ footer {
   transition: opacity 1s ease, transform 1s ease;
   opacity: 0;
   transform: translateY(20px);
-}
-
-footer p {
-  color: rgb(250, 250, 114);
+  p {
+    color: rgb(250, 250, 114);
+  }
 }
 
 /* Animations */
@@ -273,33 +272,30 @@ footer p {
 @media screen and (max-width: 768px) {
   header {
     padding: 10px;
+    h2 {
+      font-size: 30px;
+    }
+    img {
+      width: 40%;
+    }
+    ul {
+      flex-direction: column;
+      gap: 10px;
+    }
   }
-  header h2 {
-    font-size: 30px;
-  }
-  header img {
-    width: 40%;
-  }
-  header nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  main {
-    padding: 10px;
-  }
-  #grid-container {
-    width: 100%;
-  }
-  h3 {
-    font-size: 20px;
-  }
-  #contact-form input,
-  #contact-form textarea,
-  #contact-form select {
-    width: 100%;
-  }
-  #rs img {
-    width: 30%;
+
+
+#contact-form {
+  input, textarea, select {
+    main {
+      padding: 10px;
+    }
+  
+      width: 100%;
+    }
+    #rs img {
+      width: 30%;
+    }
   }
 }
 
@@ -309,21 +305,22 @@ footer p {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    h2 {
+      font-size: 50px;
+      margin: 0;
+    }
+    img {
+      width: 15%;
+    }
   }
-  header h2 {
-    font-size: 50px;
-    margin: 0;
-  }
-  header img {
-    width: 15%;
-  }
+
   main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: min-content;
     grid-template-areas:
       "whoami skills"
-      "curriculum curriculum";
+      "curriculum curriculum"
+      "cite cite";
     gap: 20px;
     padding: 20px;
   }
@@ -342,6 +339,12 @@ footer p {
     opacity: 1;
     transform: translateX(0);
   }
+
+  #cite {
+    grid-area:cite;
+    width:60%;
+    margin:auto;
+  }
   #curriculum {
     grid-area: curriculum;
     margin: auto;
@@ -352,6 +355,7 @@ footer p {
     opacity: 1;
     transform: translateY(0);
   }
+  
   footer {
     padding: 10px;
     font-size: 14px;
