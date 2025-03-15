@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Press+Start+2P&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <title>Contact - José Braulio Palomo Vázquez</title>
+  </head>
+  <body>
+    <div id="grid-container">
+      <header>
+        <h2>Contact</h2>
+        <nav>
+          <ul>
+            <li><a href="index.html" aria-label="Home">Home</a></li>
+            <li><a href="gallery.html" aria-label="Projects">Projects</a></li>
+            <li><a href="aboutme.html" aria-label="About Me">About Me</a></li>
+            <li><a href="contact.html" aria-label="Contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section id="contact-form">
+          <h3>Contact Form</h3>
+          <form action="#" method="post" novalidate>
+            <div>
+              <label for="nombre">Name:</label>
+              <input type="text" id="nombre" name="nombre" required minlength="2" maxlength="50" />
+            </div>
+            <div>
+              <label for="apellidos">Surname:</label>
+              <input type="text" id="apellidos" name="apellidos" required minlength="2" maxlength="100" />
+            </div>
+            <fieldset class="gender-fieldset">
+              <legend>Gender:</legend>
+              <label>
+                <input type="radio" name="genero" value="male" required /> Male
+              </label>
+              <label>
+                <input type="radio" name="genero" value="female" required /> Female
+              </label>
+              <label>
+                <input type="radio" name="genero" value="other" required /> Other
+              </label>
+            </fieldset>
+            <div>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div>
+              <label for="motivo">Inquiry Topic:</label>
+              <select id="motivo" name="motivo" required>
+                <option value="">Select a topic</option>
+                <option value="job">Job Opportunity</option>
+                <option value="question">Question</option>
+                <option value="collaboration">Collaboration</option>
+              </select>
+            </div>
+            <div>
+              <label for="mensaje">Message:</label>
+              <textarea id="mensaje" name="mensaje" required minlength="10" maxlength="1000"></textarea>
+            </div>
+            <div>
+              <label>
+                <input type="checkbox" name="terminos" required />
+                I accept the terms and conditions
+              </label>
+            </div>
+            <div>
+              <button type="submit">Send</button>
+            </div>
+          </form>
+        </section>
+      </main>
+      <footer>
+        <p>© José Braulio Palomo Vázquez - Web Developer</p>
+      </footer>
+    </div>
+  </body>
+</html>
