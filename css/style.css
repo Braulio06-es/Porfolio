@@ -24,7 +24,6 @@ body {
   margin: 0 auto;
 }
 
-/* Grid Container */
 #grid-container {
   display: grid;
   grid-template-areas:
@@ -212,6 +211,10 @@ main {
     border: none;
     padding: 0;
   }
+  textarea {
+    min-width:60%;
+    max-width: 100%;
+  }
   #sendButton {
     button {
       padding: 3%;
@@ -241,11 +244,12 @@ main {
 footer {
   grid-area: footer;
   background-color: black;
+  display: flex;
+  justify-content: center;
+  gap:10px;
   padding: 3%;
   font-size: 10px;
-  transition: opacity 1s ease, transform 1s ease;
-  opacity: 0;
-  transform: translateY(20px);
+  animation: slideInDown 1s ease-out;
   p {
     color: rgb(250, 250, 114);
   }
@@ -313,8 +317,10 @@ footer {
       width: 15%;
     }
   }
-
   main {
+    padding: 20px;
+  }
+  #grid2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -322,8 +328,8 @@ footer {
       "curriculum curriculum"
       "cite cite";
     gap: 20px;
-    padding: 20px;
   }
+
   #whoami {
     grid-area: whoami;
     margin: auto;
@@ -356,6 +362,26 @@ footer {
     transform: translateY(0);
   }
   
+  #projects {
+    width: 60%;
+    grid-area: curriculum;
+    margin: auto;
+    margin-top:7%;
+  }
+
+  #aboutme {
+    width: 60%;
+    grid-area: curriculum;
+    margin: auto;
+    margin-top:7%;
+  }
+
+  #contact-form {
+    width: 60%;
+    grid-area: curriculum;
+    margin: auto;
+    margin-top:7%;
+  }
   footer {
     padding: 10px;
     font-size: 14px;
