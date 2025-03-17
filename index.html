@@ -14,8 +14,9 @@
     <title>Portfolio - José Braulio Palomo Vázquez</title>
   </head>
   <body>
-    <audio id="background-music" loop>
+    <audio id="background-music" controls loop accesskey="p">
       <source src="/audio/JustASound.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
     </audio>
     <div id="grid-container">
       <header>
@@ -32,6 +33,7 @@
       </header>
       <main>
         <div id="grid2">
+          <h1 id="audioControl">Press P to play some music</h1>
           <section id="whoami">
             <h3>Who Am I?</h3><br>
             <p>
@@ -129,48 +131,26 @@
 
       //Audio
       
-      document.addEventListener("DOMContentLoaded", function () {
-            let audio = document.getElementById("background-music");
-            audio.volume = 0.2; // Reducir el volumen al 20%
+    const audio = document.getElementById("background-music");
+    const toggleButton = document.getElementById("toggleAudio");
 
-            // Comprobar si hay un valor guardado en localStorage
-            const isAudioPlaying = localStorage.getItem('audioPlaying') === 'true';
+    function toggleAudio() {
+      if (audio.paused) {
+        audio.play();
+        toggleButton.textContent = "Pausar";
+      } else {
+        audio.pause();
+        toggleButton.textContent = "Reproducir";
+      }
+    }
 
-            if (isAudioPlaying) {
-                audio.play();
-            } else {
-                // Intentar reproducir el audio en caso de bloqueo por el navegador
-                audio.play().catch(error => {
-                    console.log("La reproducción automática fue bloqueada por el navegador.");
-                });
-            }
-
-            // Evento para pausar o reanudar con la tecla "P"
-            document.addEventListener("keydown", function (event) {
-                if (event.key.toLowerCase() === "p") {
-                    if (audio.paused) {
-                        audio.play();
-                    } else {
-                        audio.pause();
-                    }
-                }
-            });
-
-            // Guardar el estado de la música en localStorage
-            audio.addEventListener('play', () => {
-                localStorage.setItem('audioPlaying', 'true');
-            });
-
-            audio.addEventListener('pause', () => {
-                localStorage.setItem('audioPlaying', 'false');
-            });
-
-            // Mostrar mensaje sin interrumpir el uso de la página
-            setTimeout(function() {
-                alert("Press 'P' to play or pause the background music.");
-            }, 100); // Mostrar el mensaje después de un pequeño retraso para no bloquear la página inmediatamente
-
-        });
+    // Asigna la función a la tecla "p" (o "P")
+    document.addEventListener("keydown", function(e) {
+      if (e.key.toLowerCase() === "p") {
+        toggleAudio();
+      }
+    });
+      
     </script>
   </body>
 </html>
