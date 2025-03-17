@@ -32,11 +32,11 @@
           <form action="#" method="post" novalidate>
             <div>
               <label for="nombre">Name:</label>
-              <input type="text" id="nombre" name="nombre" placeholder="ex: Pedro" />
+              <input type="text" id="nombre" name="nombre" placeholder="ex: Braulio" />
             </div>
             <div>
               <label for="apellidos">Surname:</label>
-              <input type="text" id="apellidos" name="apellidos" required placeholder="ex: Pérez Garrido" />
+              <input type="text" id="apellidos" name="apellidos" required placeholder="ex: Palomo Vázquez" />
             </div>
             <fieldset class="gender-fieldset">
               <legend>Gender:</legend>
@@ -48,6 +48,9 @@
               </label>
               <label>
                 <input type="radio" name="genero" value="other" required /> Other
+              </label>
+              <label>
+                <input type="radio" name="genero" value="not-say" required /> Not say
               </label>
             </fieldset>
             <div>
@@ -61,19 +64,18 @@
                 <option value="Job">Job Opportunity</option>
                 <option value="Question">Question</option>
                 <option value="Collaboration">Collaboration</option>
-                <option value="Other">Collaboration</option>
+                <option value="Other">Other</option>
             </select>
             </div>
             <div>
               <label for="mensaje">Message:</label>
               <textarea id="mensaje" name="mensaje" required minlength="10" maxlength="1000" placeholder="Hello, I want to contact you because of..."></textarea>
-            </div>
+            </div><br>
             <div>
               <label>
-                <input type="checkbox" name="terminos" required />
-                <p>I accept the terms and conditions</p>
+                <p><input id="checkbox" type="checkbox" name="terminos" required />Accept the terms and conditions</p>
               </label>
-            </div>
+            </div><br>
             <div id="sendButton">
               <button type="submit">Send</button>
             </div>
@@ -91,7 +93,7 @@
       </main>
       <footer>
         <img src="img/favicon.png" alt="Logo">
-        <p>José Braulio Palomo Vázquez - Web Developer</p>
+        <p>© José Braulio Palomo Vázquez - Web Developer</p>
       </footer>
     </div>
   </body>
