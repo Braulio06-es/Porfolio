@@ -98,6 +98,13 @@ main {
   transition: opacity 1s ease, transform 1s ease;
   opacity: 0;
   transform: translateX(-50px);
+  #me1 {
+    float: left;
+    width: 25%;
+    border-radius: 5px;
+    box-shadow: rgb(62, 62, 62) 3px 3px 5px;
+    margin: 15px;
+  }
 }
 
 /* Figure: Quote */
@@ -192,6 +199,10 @@ main {
       color: #456541;
     }
   }
+
+  #spacex, #videogame {
+    width:50%;
+  }
 }
 
 
@@ -279,10 +290,16 @@ main {
     box-shadow: rgb(62, 62, 62) 3px 3px 5px;
     margin: 5px;
   }
-  #img2 {
-    width:50%;
-    border-radius: 5px;
-
+  .slider-container {
+    display: flex;
+    width: 50%;
+    overflow-x: scroll;
+  }
+  
+  .slider-container img {
+    flex: 0 0 100%;
+    width: 100%;
+    object-fit: cover;
   }
   clear:both;
 }
@@ -326,21 +343,14 @@ footer {
 }
 
 /* Responsive Styles */
-@media screen and (max-width: 768px) {
-  header {
-    padding: 10px;
-    h2 {
-      font-size: 30px;
-    }
-    img {
-      width: 40%;
-    }
-    ul {
-      flex-direction: column;
-      gap: 10px;
+@media screen and (min-width: 768px) {
+
+
+  #whoami {
+    #me1 {
+      width: 15%;
     }
   }
-
 
 #contact-form {
   input, textarea, select {
@@ -371,6 +381,11 @@ footer {
   }
   main {
     padding: 20px;
+  }
+  #whoami {
+    #me1 {
+      width: 10%;
+    }
   }
   #grid2 {
     display: grid;
