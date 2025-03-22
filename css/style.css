@@ -434,21 +434,20 @@ footer {
   
   #projects {
     width: 60%;
-    grid-area: curriculum;
+
     margin: auto;
     margin-top:7%;
   }
 
   #aboutme {
     width: 60%;
-    grid-area: curriculum;
+
     margin: auto;
     margin-top:7%;
   }
 
   #contact-form {
     width: 60%;
-    grid-area: curriculum;
     margin: auto;
     margin-top:7%;
   }
